@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}XCOPE - History | Sentiment Data{% endblock %}
+{% block content %}
+<div class="max-w-4xl mx-auto px-4 py-8">
+    <h1 class="text-4xl font-bold text-white mb-8 text-center">Tweet History</h1>
+    <form class="mb-8 bg-white/10 p-6 rounded-2xl backdrop-blur-md">
+        <div class="grid md:grid-cols-3 gap-4">
+            <input type="text" name="search" placeholder="Search tweets..." value="{{ search_query }}" class="w-full p-4 bg-white/20 rounded-xl border border-white/30 focus:outline-none focus:border-blue-400 text-white placeholder-gray-300">
+            <select name="sentiment" class="w-full p-4 bg-white/20 rounded-xl border border-white/30 focus:border-blue-400 text-white">
+                <option value="all">All Sentiments</option>
+                <option value="positive" {% if sentiment_filter == 'positive' %}selected{% endif %}>Positive</option>
+                <option value="negative" {% if sentiment_filter == 'negative' %}selected{% endif %}>Negative</option>
+                <option value="neutral" {% if sentiment_filter == 'neutral' %}selected{% endif %}>Neutral</option>
+            </select>
+            <button type="submit" class="bg-blue-500 hover:bg-blue-400 p-4 rounded-xl font-bold transition-all text-white">Filter</button>
+        </div>
+    </form>
+    <div class="space-y-4">
+        {% for tweet in tweets %}
+        <div class="p-6 bg-white/10 rounded-2xl backdrop-blur-md border border-white/20 hover:scale-[1.02] transition-all">
+            <p class="text-lg">{{ tweet.text }}</p>
+            <p class="text-sm opacity-75 mt-2">{{ tweet.timestamp }} | <span class="{% if tweet.sentiment == 'positive' %}text-green-400{% elif tweet.sentiment == 'negative' %}text-red-400{% else %}text-yellow-400{% endif %}">{{ tweet.sentiment.upper() }}</span> ({{ tweet.score }})</p>
+        </div>
+        {% endfor %}
+    </div>
+    <!-- Pagination -->
+    <div class="flex justify-between items-center mt-8">
+        <a href="/history?page={{ page - 1 }}&sentiment={{ sentiment_filter }}&search={{ search_query }}" class="px-6 py-3 bg-white/10 hover:bg-white/20 rounded-xl font-bold transition-all {% if page <= 1 %}opacity-50 pointer-events-none{% endif %}">
+            <i class="fas fa-arrow-left mr-2"></i>Previous
+        </a>
+        <span class="text-gray-400">Page {{ page }} of {{ (total / per_page) | round | int }}</span>
+        <a href="/history?page={{ page + 1 }}&sentiment={{ sentiment_filter }}&search={{ search_query }}" class="px-6 py-3 bg-white/10 hover:bg-white/20 rounded-xl font-bold transition-all {% if page * per_page >= total %}opacity-50 pointer-events-none{% endif %}">
+            Next<i class="fas fa-arrow-right ml-2"></i>
+        </a>
+    </div>
+</div>
+{% endblock %}

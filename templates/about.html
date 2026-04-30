@@ -1,0 +1,164 @@
+{% extends "base.html" %}
+{% block title %}XCOPE - About Us | Pune{% endblock %}
+{% block content %}
+<!-- About Hero -->
+<section class="min-h-[60vh] flex items-center justify-center py-20">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+        <div class="mb-6 inline-flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full backdrop-blur-md border border-white/20">
+            <i class="fas fa-map-marker-alt text-cyan-400"></i>
+            <span class="text-sm text-gray-300">Based in Pune, India</span>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-black mb-6 bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent">About XCOPE</h1>
+        <p class="text-xl text-gray-300 mb-8">Professional AI-powered sentiment analytics platform built for the modern data era.</p>
+        
+        <!-- Location Badge -->
+        <div class="inline-flex items-center gap-3 px-6 py-3 bg-white/5 rounded-2xl backdrop-blur-md border border-white/10">
+            <i class="fas fa-building text-electric-blue text-2xl"></i>
+            <div class="text-left">
+                <p class="text-sm text-gray-400">Headquartered in</p>
+                <p class="font-bold text-white">Pune, Maharashtra, India</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Mission Section -->
+<section class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+                <h2 class="text-3xl font-bold mb-4 text-white">Our Mission</h2>
+                <p class="text-gray-400 mb-6">We aim to democratize sentiment analysis by providing powerful, easy-to-use tools that help businesses and researchers understand public opinion at scale.</p>
+                <p class="text-gray-400">Based in Pune's thriving tech ecosystem, XCOPE leverages cutting-edge NLP technology to deliver real-time insights that drive better decisions.</p>
+            </div>
+            <div class="p-8 rounded-2xl bg-gradient-to-br from-electric-blue/20 to-violet/20 backdrop-blur-md border border-white/20">
+                <div class="text-6xl mb-4">🎯</div>
+                <h3 class="text-xl font-bold text-white mb-2">Vision</h3>
+                <p class="text-gray-400">To be the leading sentiment analytics platform for businesses across India and beyond.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-6">
+            <div class="p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 text-center">
+                <div class="text-4xl font-black text-electric-blue mb-2" data-count="2024">0</div>
+                <div class="text-gray-400 text-sm">Founded</div>
+            </div>
+            <div class="p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 text-center">
+                <div class="text-4xl font-black text-violet mb-2" data-count="500">0</div>
+                <div class="text-gray-400 text-sm">Analyzed/Day</div>
+            </div>
+            <div class="p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 text-center">
+                <div class="text-4xl font-black text-cyan-400 mb-2" data-count="98">0</div>
+                <div class="text-gray-400 text-sm">Accuracy %</div>
+            </div>
+            <div class="p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 text-center">
+                <div class="text-4xl font-black text-purple-400 mb-2" data-count="24">0</div>
+                <div class="text-gray-400 text-sm">/7 Support</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-4 text-white">Our Team</h2>
+        <p class="text-center text-gray-400 mb-12">Meet the experts behind XCOPE - based in Pune's innovation hub.</p>
+        
+        <div class="grid md:grid-cols-3 gap-6">
+            <!-- Team Member 1 -->
+            <div class="p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-electric-blue/50 transition-all">
+                <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-electric-blue to-violet flex items-center justify-center">
+                    <i class="fas fa-user text-3xl text-white"></i>
+                </div>
+                <h3 class="text-lg font-bold text-white text-center">Shruti Sonalkar</h3>
+                <p class="text-electric-blue text-sm text-center mb-2">Founder & Lead Developer</p>
+                <p class="text-gray-400 text-center text-sm">Data Analyst & Software Engineer based in Pune, India.</p>
+            </div>
+            
+            <!-- Team Member 2 -->
+            <div class="p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-violet/50 transition-all">
+                <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-violet to-cyan-400 flex items-center justify-center">
+                    <i class="fas fa-user text-3xl text-white"></i>
+                </div>
+                <h3 class="text-lg font-bold text-white text-center">Dr. Priya Sharma</h3>
+                <p class="text-violet text-sm text-center mb-2">NLP Research Lead</p>
+                <p class="text-gray-400 text-center text-sm">PhD in Computational Linguistics.</p>
+            </div>
+            
+            <!-- Team Member 3 -->
+            <div class="p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-cyan-400/50 transition-all">
+                <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-cyan-400 to-electric-blue flex items-center justify-center">
+                    <i class="fas fa-user text-3xl text-white"></i>
+                </div>
+                <h3 class="text-lg font-bold text-white text-center">Amit Joshi</h3>
+                <p class="text-cyan-400 text-sm text-center mb-2">Backend Architecture</p>
+                <p class="text-gray-400 text-center text-sm">Expert in distributed systems.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Location Section -->
+<section class="py-16">
+    <div class="max-w-4xl mx-auto px-4">
+        <div class="p-8 rounded-2xl bg-white/5 backdrop-blur-md border border-white/20">
+            <div class="text-center mb-6">
+                <i class="fas fa-map-marker-alt text-3xl text-cyan-400 mb-4"></i>
+                <h2 class="text-2xl font-bold text-white">Our Location</h2>
+                <p class="text-gray-400">Pune Innovation Hub, Maharashtra, India</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6 text-center">
+                <div>
+                    <i class="fas fa-envelope text-2xl text-electric-blue mb-2"></i>
+                    <p class="text-sm text-gray-400">Email</p>
+                    <p class="text-white">hello@xcope.in</p>
+                </div>
+                <div>
+                    <i class="fas fa-clock text-2xl text-violet mb-2"></i>
+                    <p class="text-sm text-gray-400">Hours</p>
+                    <p class="text-white">Mon-Fri: 9AM-6PM IST</p>
+                </div>
+                <div>
+                    <i class="fas fa-phone text-2xl text-cyan-400 mb-2"></i>
+                    <p class="text-sm text-gray-400">Phone</p>
+                    <p class="text-white">+91 98765 43210</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Animated Counter
+    function animateCounters() {
+        const counters = document.querySelectorAll('[data-count]');
+        counters.forEach(counter => {
+            const target = parseInt(counter.getAttribute('data-count'));
+            const duration = 2000;
+            const step = target / (duration / 16);
+            let current = 0;
+            
+            const updateCounter = () => {
+                current += step;
+                if (current < target) {
+                    counter.textContent = Math.floor(current);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    counter.textContent = target;
+                }
+            };
+            
+            updateCounter();
+        });
+    }
+    
+    // Run on load
+    animateCounters();
+</script>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
+    <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 shadow-2xl">
+        <h3 class="text-3xl font-bold mb-2">Total Tweets</h3>
+        <p class="text-4xl font-black text-green-400" data-stat="total">{{ stats.total }}</p>
+    </div>
+    <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 shadow-2xl">
+        <h3 class="text-3xl font-bold mb-2">Positive</h3>
+        <p class="text-4xl font-black text-green-400" data-stat="positive">{{ stats.positive }}</p>
+    </div>
+    <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 shadow-2xl">
+        <h3 class="text-3xl font-bold mb-2">Negative</h3>
+        <p class="text-4xl font-black text-red-400" data-stat="negative">{{ stats.negative }}</p>
+    </div>
+    <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 shadow-2xl">
+        <h3 class="text-3xl font-bold mb-2">Avg Score</h3>
+        <p class="text-4xl font-black text-yellow-400" data-stat="avg_score">{{ stats.avg_score }}</p>
+    </div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+    <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 shadow-2xl">
+        <h3 class="text-2xl font-bold mb-6">Sentiment Trend</h3>
+        <canvas id="trendChart" height="200"></canvas>
+    </div>
+    <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 shadow-2xl">
+        <h3 class="text-2xl font-bold mb-6">Live Tweets</h3>
+        <div id="liveTweets" class="space-y-4 max-h-96 overflow-y-auto"></div>
+    </div>
+</div>
+{% endblock %}

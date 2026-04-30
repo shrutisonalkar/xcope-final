@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+{% block title %}XCOPE - AI Sentiment Analytics | Home{% endblock %}
+{% block content %}
+<!-- Hero Section -->
+<section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <!-- Animated Background -->
+    <div class="absolute inset-0 overflow-hidden">
+        <div class="absolute -top-40 -right-40 w-80 h-80 bg-electric-blue/20 rounded-full blur-3xl animate-pulse"></div>
+        <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-violet/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+    </div>
+    
+    <div class="text-center relative z-10 px-4">
+        <div class="mb-6 inline-flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full backdrop-blur-md border border-white/20">
+            <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+            <span class="text-sm text-gray-300">AI-Powered Analytics</span>
+        </div>
+        <h1 class="text-5xl md:text-7xl font-black mb-6 bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent">
+            XCOPE
+        </h1>
+        <p class="text-xl md:text-2xl mb-4 text-gray-300">AI-Powered Sentiment Analytics Dashboard</p>
+        <p class="text-lg mb-8 text-gray-400 max-w-2xl mx-auto">Professional real-time sentiment analysis for big data. Built for Data Analysts & Developers in Pune, India.</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="/dashboard" class="px-8 py-4 bg-gradient-to-r from-electric-blue to-violet hover:from-violet hover:to-cyan-400 text-white font-bold rounded-2xl transition-all hover:scale-105 shadow-lg shadow-electric-blue/25">
+                <i class="fas fa-chart-line mr-2"></i>Dashboard
+            </a>
+            <a href="/about" class="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-2xl backdrop-blur-md border border-white/20 transition-all">
+                <i class="fas fa-info-circle mr-2"></i>Learn More
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section id="features" class="min-h-screen flex items-center justify-center py-20">
+    <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-4xl md:text-5xl font-black text-center mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Powerful Features</h2>
+        <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto">Everything you need for professional sentiment analysis at scale.</p>
+        
+        <div class="grid md:grid-cols-3 gap-6">
+            <!-- Feature 1 -->
+            <div class="group relative p-8 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-electric-blue/50 transition-all hover:scale-[1.02]">
+                <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-electric-blue/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div class="relative z-10">
+                    <div class="text-4xl mb-4">📊</div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Big Data Analytics</h3>
+                    <p class="text-gray-400 text-sm">Scalable to 10,000+ tweets with real-time streaming. Advanced filtering, search, and pagination for efficient data analysis.</p>
+                </div>
+            </div>
+            
+            <!-- Feature 2 -->
+            <div class="group relative p-8 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-violet/50 transition-all hover:scale-[1.02]">
+                <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-violet/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div class="relative z-10">
+                    <div class="text-4xl mb-4">⚡</div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Real-Time Updates</h3>
+                    <p class="text-gray-400 text-sm">Socket.IO powered live streaming. Instant sentiment analysis with interactive Chart.js visualizations and dynamic dashboards.</p>
+                </div>
+            </div>
+            
+            <!-- Feature 3 -->
+            <div class="group relative p-8 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-cyan-400/50 transition-all hover:scale-[1.02]">
+                <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-cyan-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div class="relative z-10">
+                    <div class="text-4xl mb-4">🎨</div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Modern UI/UX</h3>
+                    <p class="text-gray-400 text-sm">Professional Tailwind CSS design with glassmorphism effects. Fully responsive for all devices - desktop, tablet, and mobile.</p>
+                </div>
+            </div>
+            
+            <!-- Feature 4 -->
+            <div class="group relative p-8 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-purple-400/50 transition-all hover:scale-[1.02]">
+                <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-purple-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div class="relative z-10">
+                    <div class="text-4xl mb-4">🔬</div>
+                    <h3 class="text-xl font-bold mb-3 text-white">NLP Engine</h3>
+                    <p class="text-gray-400 text-sm">Powered by TextBlob for accurate sentiment analysis. Natural language processing with polarity scoring and classification.</p>
+                </div>
+            </div>
+            
+            <!-- Feature 5 -->
+            <div class="group relative p-8 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-blue-400/50 transition-all hover:scale-[1.02]">
+                <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div class="relative z-10">
+                    <div class="text-4xl mb-4">📁</div>
+                    <h3 class="text-xl font-bold mb-3 text-white">CSV Export</h3>
+                    <p class="text-gray-400 text-sm">Export your sentiment data to CSV format. Download up to 1000 records for further analysis in Excel, Python, or R.</p>
+                </div>
+            </div>
+            
+            <!-- Feature 6 -->
+            <div class="group relative p-8 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-green-400/50 transition-all hover:scale-[1.02]">
+                <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-green-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div class="relative z-10">
+                    <div class="text-4xl mb-4">🚀</div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Production Ready</h3>
+                    <p class="text-gray-400 text-sm">Built with Flask-SocketIO, threaded streaming, and optimized data structures. Ready for deployment.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-20">
+    <div class="max-w-4xl mx-auto px-4">
+        <div class="p-12 rounded-3xl bg-gradient-to-br from-electric-blue/20 via-violet/20 to-cyan-400/20 backdrop-blur-md border border-white/20 text-center">
+            <h2 class="text-3xl md:text-4xl font-black mb-4 text-white">Ready to Get Started?</h2>
+            <p class="text-gray-300 mb-8 max-w-xl mx-auto">Join data analysts and developers in Pune and around the world using XCOPE for professional sentiment analysis.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="/dashboard" class="px-8 py-4 bg-gradient-to-r from-electric-blue to-violet hover:from-violet hover:to-cyan-400 text-white font-bold rounded-2xl transition-all hover:scale-105">
+                    <i class="fas fa-rocket mr-2"></i>Launch Dashboard
+                </a>
+                <a href="/contact" class="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-2xl backdrop-blur-md border border-white/20 transition-all">
+                    <i class="fas fa-envelope mr-2"></i>Contact Us
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
