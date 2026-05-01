@@ -17,7 +17,7 @@ import os
 app = Flask(__name__, static_folder="static", template_folder="templates")
 app.config['SECRET_KEY'] = 'xc0pe-s3cr3t-v2!2026'
 
-socketio = SocketIO(app, cors_allowed_origins="*")
+socketio = SocketIO(app, cors_allowed_origins="*", async_mode="eventlet")
 
 # -----------------------------
 # DATA STORAGE
@@ -91,23 +91,18 @@ def tweet_stream():
         socketio.emit("new_tweet", tweet)
         socketio.emit("dashboard_update", get_dashboard_stats())
 
-        time.sleep(1)
+        eventlet.sleep(1)
+
+
+# Start tweet stream on startup (for Render/Gunicorn)
+threading.Thread(target=tweet_stream, daemon=True).start()
 
 
 # -----------------------------
 # SOCKET EVENTS (IMPORTANT)
 # -----------------------------
-thread = None
-thread_lock = threading.Lock()
-
 @socketio.on("connect")
-def handle_connect():
-    global thread
-
-    with thread_lock:
-        if thread is None:
-            thread = socketio.start_background_task(tweet_stream)
-
+def connect_user():
     emit("init", get_dashboard_stats())
 
 
