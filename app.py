@@ -71,7 +71,7 @@ def get_dashboard_stats():
     history = list(sentiment_history)
 
     return {
-        "total_tweets": len(rolling_tweets),
+        "total": len(rolling_tweets),
         "positive": pos,
         "negative": neg,
         "neutral": neut,
